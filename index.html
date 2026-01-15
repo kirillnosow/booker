@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Мои книги</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true"></div>
+        <div class="brand__text">
+          <div class="brand__title">Мои книги</div>
+          <div class="brand__subtitle">Читаю и прочитал</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn--primary" id="btnAddBook" type="button">Добавить книгу</button>
+        <button class="btn btn--secondary" id="btnAddProgress" type="button">Добавить прогресс</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">Читаю</h2>
+        <div class="section__meta" id="readingCount">0 книг</div>
+      </div>
+
+      <div class="grid" id="readingGrid" aria-label="Список книг, которые читаю">
+        <!-- cards -->
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2 class="section__title">Прочитал</h2>
+        <div class="section__meta" id="finishedCount">0 книг</div>
+      </div>
+
+      <div class="grid" id="finishedGrid" aria-label="Список прочитанных книг">
+        <!-- cards -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Простые модалки-заглушки (пока без форм, чтобы не забегать вперёд) -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__card" role="document">
+      <div class="modal__head">
+        <div class="modal__title" id="modalTitle">Заголовок</div>
+        <button class="iconbtn" type="button" aria-label="Закрыть" data-close="true">✕</button>
+      </div>
+      <div class="modal__body" id="modalBody">
+        <!-- content -->
+      </div>
+      <div class="modal__foot">
+        <button class="btn btn--ghost" type="button" data-close="true">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
